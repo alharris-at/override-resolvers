@@ -1,0 +1,4 @@
+## Correspond .req $util.toJson({})
+#set( $data = $context.prev.result )
+$util.qr($data.put("fileBasedVTLOverride", "I was set by a file-based VTL resolver"))
+$util.toJson($data)

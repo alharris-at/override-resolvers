@@ -1,0 +1,44 @@
+{
+  "dev": {
+    "awscloudformation": {
+      "AuthRoleName": "amplify-jsresolvers-dev-125634-authRole",
+      "UnauthRoleArn": "arn:aws:iam::411040628600:role/amplify-jsresolvers-dev-125634-unauthRole",
+      "AuthRoleArn": "arn:aws:iam::411040628600:role/amplify-jsresolvers-dev-125634-authRole",
+      "Region": "us-west-2",
+      "DeploymentBucketName": "amplify-jsresolvers-dev-125634-deployment",
+      "UnauthRoleName": "amplify-jsresolvers-dev-125634-unauthRole",
+      "StackName": "amplify-jsresolvers-dev-125634",
+      "StackId": "arn:aws:cloudformation:us-west-2:411040628600:stack/amplify-jsresolvers-dev-125634/2ba929f0-6aa8-11ed-8fb5-028b64e370ff",
+      "AmplifyAppId": "d2i99uar8mntsz"
+    },
+    "categories": {
+      "api": {
+        "jsresolvers": {}
+      },
+      "custom": {
+        "customVTLBasedCDKOverride": {}
+      }
+    }
+  },
+  "devtwo": {
+    "awscloudformation": {
+      "AuthRoleName": "amplify-jsresolvers-devtwo-203114-authRole",
+      "UnauthRoleArn": "arn:aws:iam::072027113961:role/amplify-jsresolvers-devtwo-203114-unauthRole",
+      "AuthRoleArn": "arn:aws:iam::072027113961:role/amplify-jsresolvers-devtwo-203114-authRole",
+      "Region": "us-west-2",
+      "DeploymentBucketName": "amplify-jsresolvers-devtwo-203114-deployment",
+      "UnauthRoleName": "amplify-jsresolvers-devtwo-203114-unauthRole",
+      "StackName": "amplify-jsresolvers-devtwo-203114",
+      "StackId": "arn:aws:cloudformation:us-west-2:072027113961:stack/amplify-jsresolvers-devtwo-203114/289938c0-6d43-11ed-8f4e-0284f74e1693",
+      "AmplifyAppId": "dp2jt7uawtia5"
+    },
+    "categories": {
+      "api": {
+        "jsresolvers": {}
+      },
+      "custom": {
+        "customVTLBasedCDKOverride": {}
+      }
+    }
+  }
+}
