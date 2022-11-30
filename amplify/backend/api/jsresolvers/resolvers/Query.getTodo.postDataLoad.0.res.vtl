@@ -1,0 +1,3 @@
+#set( $data = $context.prev.result )
+$util.qr($data.put("content", "Placeholder content - update me."))
+$util.toJson($data)

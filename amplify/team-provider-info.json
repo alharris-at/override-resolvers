@@ -40,5 +40,26 @@
         "customVTLBasedCDKOverride": {}
       }
     }
+  },
+  "devthree": {
+    "awscloudformation": {
+      "AuthRoleName": "amplify-jsresolvers-devthree-104438-authRole",
+      "UnauthRoleArn": "arn:aws:iam::411040628600:role/amplify-jsresolvers-devthree-104438-unauthRole",
+      "AuthRoleArn": "arn:aws:iam::411040628600:role/amplify-jsresolvers-devthree-104438-authRole",
+      "Region": "us-west-2",
+      "DeploymentBucketName": "amplify-jsresolvers-devthree-104438-deployment",
+      "UnauthRoleName": "amplify-jsresolvers-devthree-104438-unauthRole",
+      "StackName": "amplify-jsresolvers-devthree-104438",
+      "StackId": "arn:aws:cloudformation:us-west-2:411040628600:stack/amplify-jsresolvers-devthree-104438/002d65c0-7016-11ed-ba96-06826f898eb9",
+      "AmplifyAppId": "d2i99uar8mntsz"
+    },
+    "categories": {
+      "api": {
+        "jsresolvers": {}
+      },
+      "custom": {
+        "customVTLBasedCDKOverride": {}
+      }
+    }
   }
 }

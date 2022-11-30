@@ -1,8 +1,15 @@
+# Normal model will be used to demonstrate slot-based resolvers.
 type Todo @model @auth(rules: [{ allow: public }]) {
   fileBasedVTLOverride: String
   fileBasedJSOverride: String
 }
 
+type CustomQueryResult {
+  cdkBasedVTLOverride: String
+  cdkBasedJSOverride: String
+}
+
+# Custom Query myCustomQuery is used to demonstrate using JS and VTL custom resolvers via the `custom` category.
 type Query {
-  myCustomQuery: String
+  myCustomQuery: CustomQueryResult @auth(rules: [{ allow: public }])
 }

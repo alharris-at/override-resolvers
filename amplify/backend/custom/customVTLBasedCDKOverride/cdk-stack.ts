@@ -26,22 +26,22 @@ export class cdkStack extends cdk.Stack {
 
     const apiId = cdk.Fn.ref(retVal.api.jsresolvers.GraphQLAPIIdOutput);
 
+    const loadResolverFile = (fileName: string): string => fs.readFileSync(path.join(__dirname, '..', 'resolvers', fileName), 'utf-8')
+
     const vtlFunction = new appsync.CfnFunctionConfiguration(this as unknown as any, 'myCustomVTLFunction', {
       apiId,
       dataSourceName: 'NONE_DS',
       functionVersion: '2018-05-29',
       name: 'myCustomVTLFunction',
-      requestMappingTemplate: `$util.toJson({})`,
-      responseMappingTemplate: `#set( $data = $context.prev.result )
-$util.qr($data.put("cdkBasedVTLOverride", "I was set by a cdk-based VTL resolver"))
-$util.toJson($data)`,
+      requestMappingTemplate: loadResolverFile('customResolver.req.vtl'),
+      responseMappingTemplate: loadResolverFile('customResolver.res.vtl'),
     });
 
     const jsFunction = new cdk.CfnResource(this, 'myCustomJSFunction', {
       type: 'AWS::AppSync::FunctionConfiguration',
       properties: {
         ApiId: apiId,
-        Code: fs.readFileSync(path.join(__dirname, '..', 'resolvers', 'simpleResolver.js'), 'utf-8'),
+        Code: loadResolverFile('customResolver.js'),
         DataSourceName: 'NONE_DS',
         Name: 'myCustomJSFunction',
         Runtime: { 
